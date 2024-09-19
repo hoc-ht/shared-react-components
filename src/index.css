@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.preview-area {
+  background-color: lightgray;
+  width: 100%;
+}
+
+.film-strip {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.film-strip .film-strip-item {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  padding-bottom: 20px;
+  margin-right: 15px;
+}
+
+.film-strip .film-strip-item img {
+  height: 100%;
+}
+
+.film-strip .film-strip-item .file-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.resizable-element {
+  position: relative;
+}
+
+.resizable-element .resize-handler {
+  height: 2px;
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-top: 2px dashed #000;
+  cursor: ns-resize;
+}
+
+.disable-selection {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
